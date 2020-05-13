@@ -44,6 +44,14 @@ export interface User {
   listings: ObjectID[];
 }
 
+export interface Viewer {
+  _id?: string;
+  token?: string;
+  avatar?: string;
+  walletID?: string;
+  didRequest: boolean;
+}
+
 export interface Booking {
   _id: ObjectID;
   listing: ObjectID;
