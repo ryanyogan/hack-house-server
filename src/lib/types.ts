@@ -34,6 +34,7 @@ export interface Listing {
 
 export interface User {
   _id: string;
+  authorized?: boolean;
   token: string;
   name: string;
   avatar: string;
