@@ -86,13 +86,12 @@ const users: User[] = [
     ],
   },
   {
-    _id: "5d378db94e84753160e08b59",
-    token: "token_************",
-    name: "Sarah K.",
+    _id: "5ec32161f4b7a7c5f47ed437",
+    token: "20427497bb06d1f642965b94ac3f2395",
+    name: "Ryan Yogan",
     avatar:
-      "https://res.cloudinary.com/tiny-house/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1560650436/mock/users/user-profile-5_tm8hhl.jpg",
-    contact: "sarah@tinyhouse.com",
-    walletID: "acct_************",
+      "https://lh3.googleusercontent.com/a-/AOh14Gjy11ZjbxM1XcWWGiqHBpENlplv60rmphGONIoI-g=s100",
+    contact: "ryanyogan@gmail.com",
     income: 104347,
     bookings: [],
     listings: [
