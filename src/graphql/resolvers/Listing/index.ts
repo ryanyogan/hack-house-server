@@ -3,7 +3,14 @@ import { Request } from "express";
 import { ObjectID } from "mongodb";
 import { Database, Listing, User } from "../../../lib/types";
 import { authorize } from "../../../lib/utils";
-import { ListingArgs, ListingBookingsArgs, ListingBookingsData } from "./types";
+import {
+  ListingArgs,
+  ListingBookingsArgs,
+  ListingBookingsData,
+  ListingsArgs,
+  ListingsData,
+  ListingsFilter,
+} from "./types";
 
 export const listingResolvers: IResolvers = {
   Query: {
@@ -26,6 +33,35 @@ export const listingResolvers: IResolvers = {
         return listing;
       } catch (error) {
         throw new Error(`Failed to query listing: ${error}`);
+      }
+    },
+    listings: async (
+      _root: undefined,
+      { filter, limit, page }: ListingsArgs,
+      { db }: { db: Database }
+    ): Promise<ListingsData> => {
+      try {
+        let cursor = db.listings.find({});
+
+        if (filter && filter === ListingsFilter.PRICE_LOW_TO_HIGH) {
+          cursor = cursor.sort({ price: 1 });
+        }
+
+        if (filter && filter === ListingsFilter.PRICE_HIGH_TO_LOW) {
+          cursor = cursor.sort({ price: -1 });
+        }
+
+        cursor = cursor.skip(page > 0 ? (page - 1) * limit : 0);
+        cursor = cursor.limit(limit);
+
+        const data: ListingsData = {
+          total: await cursor.count(),
+          result: await cursor.toArray(),
+        };
+
+        return data;
+      } catch (error) {
+        throw new Error(`Failed to query listings: ${error}`);
       }
     },
   },
