@@ -331,6 +331,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.5.tgz#3d03acd3b3414cf67faf999aed11682ed121f22b"
   integrity sha512-90hiq6/VqtQgX8Sp0EzeIsv3r+ellbGj4URKj5j30tLlZvRUpnAe9YbYnjl3pJM93GyXU0tghHhvXHq+5rnCKA==
 
+"@types/node@>=8.1.0":
+  version "14.0.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.9.tgz#43896ab87fc82bda1dfd600cdf44a0c8a64e11d2"
+  integrity sha512-0sCTiXKXELOBxvZLN4krQ0FPOAA7ij+6WwvD0k/PHd9/KAkr4dXel5J9fh6F4x1FwAQILqAWkmpeuS6mjf1iKA==
+
 "@types/node@^10.1.0":
   version "10.17.24"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.24.tgz#c57511e3a19c4b5e9692bb2995c40a3a52167944"
@@ -358,6 +363,13 @@
   dependencies:
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
+
+"@types/stripe@^7.13.23":
+  version "7.13.23"
+  resolved "https://registry.yarnpkg.com/@types/stripe/-/stripe-7.13.23.tgz#80c2a85529a419637a154cafffc64712037d9505"
+  integrity sha512-nkRMq4Z3bwE5K5A9+sJ3a3NixquuipLZJHeQJ08QHBAIP6TOGWJwWbQFmkmiBaTpGdzPcrwyHzvUoeqeO1t4+w==
+  dependencies:
+    "@types/node" "*"
 
 "@types/ws@^7.0.0":
   version "7.2.4"
@@ -2459,7 +2471,7 @@ qs@6.7.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
-qs@^6.7.0:
+qs@^6.6.0, qs@^6.7.0:
   version "6.9.4"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.4.tgz#9090b290d1f91728d3c22e54843ca44aea5ab687"
   integrity sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
@@ -2819,6 +2831,14 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
+
+stripe@^8.60.0:
+  version "8.60.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-8.60.0.tgz#764106ab639338447fddcedcd4c32ba6eb61b8bc"
+  integrity sha512-FmM0Cy1YLW8Nk3dzWg83tDKROPAJwS2f+Xeezyq15JRUSOUqaSoj1FguBY460GWpzzQcqSXUXkQozYcLU1UtAg==
+  dependencies:
+    "@types/node" ">=8.1.0"
+    qs "^6.6.0"
 
 subscriptions-transport-ws@^0.9.11, subscriptions-transport-ws@^0.9.16:
   version "0.9.16"
